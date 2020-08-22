@@ -44,6 +44,20 @@ const quotes = [
 
 //console.log(quotes);
 
+/***
+ * `randomValue` function will return a random number between 0 and 256.
+***/
+function randomValue(){
+  return Math.floor(Math.random() * 256);
+}
+
+/***
+ * `randomRGB` function will return a random color.
+***/
+function randomRGB(value) {
+  const color = `rgb(${value()}, ${value()}, ${value()})`;
+  return color;
+}
 
 /***
  * `getRandomQuote` function will return a random quote object from the quotes array of objects.
@@ -87,10 +101,11 @@ function printQuote () {
   quoteHTML += `</p>`;
 
   document.getElementById('quote-box').innerHTML = quoteHTML;
-
+  document.body.style.backgroundColor = randomRGB(randomValue);
   return quoteHTML;
 }
 
+setInterval(printQuote, 5000);
 
 /***
  * click event listener for the print quote button
