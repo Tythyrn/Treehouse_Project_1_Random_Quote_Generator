@@ -78,6 +78,12 @@ function printQuote () {
     `;
   }
 
+  if ( chosenQuote.hasOwnProperty('subject') ) {
+    quoteHTML += `
+      <span class="subject">${chosenQuote.subject}</span>
+    `;
+  }
+
   quoteHTML += `</p>`;
 
   document.getElementById('quote-box').innerHTML = quoteHTML;

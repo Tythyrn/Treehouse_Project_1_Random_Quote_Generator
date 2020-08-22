@@ -110,6 +110,15 @@ h1 {
   font-style: normal;
 }
 
+.subject {
+  font-style: italic;
+}
+
+.subject:before {
+  content: ", ";
+  font-style: normal;
+}
+
 .year:before {
   content: ", ";
   font-style: normal;
