@@ -101,10 +101,11 @@ function printQuote () {
   quoteHTML += `</p>`;
 
   document.getElementById('quote-box').innerHTML = quoteHTML;
-  document.body.style.backgroundColor = randomRGB(randomValue);
+  document.body.style.backgroundColor = randomRGB(randomValue);  //sets the body background color to a random color
   return quoteHTML;
 }
 
+//calls the prinQuote() function every 5 seconds to display a new quote on the page.
 setInterval(printQuote, 5000);
 
 /***
